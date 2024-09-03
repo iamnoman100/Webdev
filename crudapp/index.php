@@ -1,8 +1,11 @@
 <?php
     include("function.php");
 
-    $dbCrudObj = new crudApp();
+    $objCrudAdmin = new crudApp();
 
+    if(isset($_POST['add_info'])){
+        $return_msg = $objCrudAdmin->add_data($_POST);
+    }
 
 ?>
 
@@ -18,7 +21,9 @@
     <div class="container shadow">
 
     <h2>Student details</h2>
+    
         <form action="" class="form" method="post" enctype="multipart/form-data">
+        <?php if(isset($return_msg)){echo $return_msg;} ?>
         <input class="form-control mb-2" type="text" name="std_name" placeholder="Enter your name">
         <input class="form-control mb-2" type="number" name="std_roll" placeholder="Enter your roll">
         <label for="image"> Upload your image</label>
