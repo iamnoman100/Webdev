@@ -1,0 +1,1 @@
+<h2>manage post page</h2>
