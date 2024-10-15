@@ -1,10 +1,16 @@
 <?php
     $cat_name = $obj->display_category();
+
+    if(isset($_POST['add_post'])){
+       $msg = $obj->add_post($_POST);
+    }
 ?>
 
 <h2>add post page</h2>
 
-<form action="" method="POST" enctype="mutlipart/form-data">
+<h3><?php if(isset($msg)){echo $msg;} ?></h3>
+
+<form action="" method="POST" enctype="multipart/form-data">
 <div class="form-group">
     <label class=" mb-1" for="post_title">Post title</label>
     <input name="post_title" class="form-control py-4" id="post_title" type="text"/>

@@ -36,6 +36,10 @@
                                     include("view/manage_cat_view.php");
                                 }else if ($view == "edit category"){
                                     include("view/edit_cat_view.php");
+                                }else if ($view == "edit_img"){
+                                    include("view/edit_img_view.php");
+                                }else if ($view == "edit post"){
+                                    include("view/edit_post_view.php");
                                 }
                             }
                         ?>
